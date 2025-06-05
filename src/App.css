@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(196, 181, 234);
+  padding: 2rem;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* search */
+
+.search-container {
+  display: flex;
+  width: 80vw;
+  padding: 10px;
+  justify-self: center;
+  justify-content: space-between;
+  background-color: rgba(225, 225, 225, 0.83);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
