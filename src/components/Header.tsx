@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     state.cart.items.reduce((total, item) => total + item.quantity, 0)
   );
   return (
-    <header className="header ">
+    <header className="header">
       <Link to="/">
         <h1 className="text-xl font-bold">Manloi e-Shop</h1>
       </Link>
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
           <FaShoppingCart />
         </Link>
         {cartTotalQuantity > 0 && (
-          <span className="absolute top-5 right-3 bg-red-500 text-white rounded-full text-xs px-2">
+          <span className="absolute top-5 right-15 bg-red-500 text-white rounded-full text-xs px-2">
             {cartTotalQuantity}
           </span>
         )}

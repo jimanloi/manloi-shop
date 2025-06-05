@@ -82,7 +82,9 @@ const Cart: React.FC = () => {
           <div className="text-right text-xl font-bold mt-6">
             Total: ${totalPrice.toFixed(2)}
           </div>
-          <button>Payment</button>
+          <button className="bg-blue-600 text-white font-semibold py-2 px-6 rounded hover:bg-blue-700 transition">
+            Proceed to payment
+          </button>
         </div>
       )}
     </div>
