@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar";
 import Products from "./components/Products";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./pages/Cart";
+import Payment from "./pages/Payment";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             }
           ></Route>
           <Route path="/cart" element={<Cart />} />
+          <Route path="/cart/payment" element={<Payment />} />
         </Routes>
       </Router>
     </>

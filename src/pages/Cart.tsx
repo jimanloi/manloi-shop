@@ -3,10 +3,13 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
 import { useDispatch } from "react-redux";
 import { removeFromCart, updateQuantity } from "../store/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 const Cart: React.FC = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
+
+  const navigate = useNavigate();
 
   // Calculate total price
   const totalPrice = cartItems.reduce(
@@ -82,7 +85,10 @@ const Cart: React.FC = () => {
           <div className="text-right text-xl font-bold mt-6">
             Total: ${totalPrice.toFixed(2)}
           </div>
-          <button className="bg-blue-600 text-white font-semibold py-2 px-6 rounded hover:bg-blue-700 transition">
+          <button
+            className="bg-blue-600 text-white font-semibold py-2 px-6 rounded hover:bg-blue-700 transition"
+            onClick={() => navigate("/cart/payment")}
+          >
             Proceed to payment
           </button>
         </div>
